@@ -18,7 +18,7 @@ const search = ref(cookie.value);
 //   error
 //   //must use template literal if you want to add dynamic values;
 //   // use fetch must have a function calling the api to dynamically update.
-// } = useFetch(() => `https://api.openweathermap.org/data/2.5/weather?q=${search.value}&units=imperial&appid=301b282421d5ab0658e1410019293854`)
+// } = useFetch(() => `https://api.openweathermap.org/data/2.5/weather?q=${search.value}&units=imperial&appid=`)
 
 // city is to uniquely identify
 // refresh to update data in a useAsync call.
