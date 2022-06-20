@@ -1,18 +1,21 @@
-import { defineNuxtConfig } from 'nuxt'
+import {defineNuxtConfig} from 'nuxt'
 
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
-        css: [
-            "~/assets/css/tailwind.css"
-        ],
+    publicRuntimeConfig: {
+        WEATHER_APP_SECRET: process.env.WEATHER_APP_SECRET
+    },
+    css: [
+        "~/assets/css/tailwind.css"
+    ],
     build: {
-            postcss: {
-                postcssOptions: {
-                   plugins:{
-                       tailwindcss:{},
-                       autoprefixer: {},
-                   }
+        postcss: {
+            postcssOptions: {
+                plugins: {
+                    tailwindcss: {},
+                    autoprefixer: {},
                 }
             }
+        }
     }
 })
